@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Header from './components/Header';
+import './App.scss';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch('https://gitconnected.com/v1/portfolio/vincent-miller-2')
+      .then(res => res.json())
+      .then(json => {
+        console.log(json);
+        setUser(json);
+      });
+  }, []);
+
+  if (!user) {
+    return <div />
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h3>Coming Soon...</h3>
-      </header>
+      <Header user={user} />
     </div>
   );
 }
