@@ -1,0 +1,35 @@
+.portfolio__work {
+  &__header {
+    text-align: center;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+
+    &__item {
+      flex-basis: 40%;
+
+      > h3 {
+        margin: 0;
+      }
+
+      &__basic {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__highlights {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__highlight {
+          padding: 5px 0;
+        }
+      }
+    }
+  }
+}
