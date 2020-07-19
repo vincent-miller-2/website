@@ -1,0 +1,24 @@
+.portfolio__sidebar {
+  border-right: 1px solid black;
+  width: 250px;
+  margin: 10px;
+  float: left;
+  text-align: center;
+
+  &__static {
+    border-bottom: 1px solid black;
+    &__image {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      padding: 2px;
+      border: 6px solid whitesmoke;
+      background-color: black;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
