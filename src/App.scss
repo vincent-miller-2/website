@@ -1,9 +1,15 @@
-* {
-  background-color: #37474F;
-  color: whitesmoke;
-  font-family: 'Raleway', sans-serif;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-button {
-  display: none;
+main {
+  background-color: #67898f;
+  background: url(./bg1.png) repeat;
+  flex-grow: 1;
+  padding: .3em;
+}
+* {
+  font-family: 'Lato', sans-serif;
 }

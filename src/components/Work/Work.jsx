@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'semantic-ui-react';
 import WorkItem from './WorkItem';
 import './Work.scss';
 
@@ -8,11 +9,13 @@ export default function Work({ work }) {
   ));
 
   return (
-    <div className="portfolio__work">
-      <h1 className="portfolio__work__header">Work</h1>
-      <div className="portfolio__work__items">
-        {workItems}
-      </div>
-    </div>
+    <main className="portfolio__work">
+      <Container text>
+        <h1 className="portfolio__work__header">Work</h1>
+        <div className="portfolio__work__items">
+          {workItems}
+        </div>
+      </Container>
+    </main>
   )
 }
