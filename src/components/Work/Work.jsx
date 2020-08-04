@@ -11,7 +11,6 @@ export default function Work({ work }) {
   return (
     <main className="portfolio__work">
       <Container text>
-        <h1 className="portfolio__work__header">Work</h1>
         <div className="portfolio__work__items">
           {workItems}
         </div>

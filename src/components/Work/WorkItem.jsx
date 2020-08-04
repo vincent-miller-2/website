@@ -1,4 +1,5 @@
 import React from 'react';
+import { Header, Segment } from 'semantic-ui-react';
 
 export default function WorkItem({ experience }) {
   const workItems = experience.highlights.map(highlight => (
@@ -6,16 +7,20 @@ export default function WorkItem({ experience }) {
   ));
 
   return (
-    <div className="portfolio__work__items__item">
-      <h1>{experience.company}</h1>
-      <h3>{experience.position}</h3>
+    <Segment className="portfolio__work__items__item">
+      <Header as='h2'>{experience.company}</Header>
+      <Header as='h3'>{experience.position}</Header>
       <div className="portfolio__work__items__item__basic">
-        <p>{experience.location}</p>
-        <p>{`${experience.start.month}/${experience.start.year} - ${experience.isCurrentRole ? 'present' : `${experience.end.month}/${experience.end.year}`}`}</p>
+        <span className="portfolio__work__items__item__basic__location">
+          {experience.location}
+        </span>
+        <span className="portfolio__work__items__item__basic__time">
+          {`${experience.start.month}/${experience.start.year} - ${experience.isCurrentRole ? 'present' : `${experience.end.month}/${experience.end.year}`}`}
+        </span>
       </div>
       <ul className="portfolio__work__items__item__highlights">
         {workItems}
       </ul>
-    </div>
+    </Segment>
   )
 }

@@ -1,0 +1,26 @@
+.portfolio__education {
+  > div.ui.segment:first-child {
+    margin-top: 11em;
+  }
+  
+  &__items {
+    &__item{
+      &__image {
+        > img {
+          max-width: 10em;
+          height: auto;
+        }
+      }
+
+      &__basic {
+        display: flex;
+        justify-content: space-evenly;
+        font-weight: bold;
+      }
+
+      &__descripton {
+        text-align: left;
+      }
+    }
+  }
+}

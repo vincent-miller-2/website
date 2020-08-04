@@ -4,7 +4,7 @@ import PageHeader from './components/PageHeader';
 import SideBar from './components/Sidebar';
 import About from './components/About';
 import Work from './components/Work';
-import Contact from './components/Contact';
+import Education from './components/Education';
 import Footer from './components/Footer';
 import './App.scss';
 
@@ -15,7 +15,6 @@ function App() {
     fetch('https://gitconnected.com/v1/portfolio/vincent-miller-2')
       .then(res => res.json())
       .then(json => {
-        console.log(json);
         setUser(json);
       });
   }, []);
@@ -32,7 +31,7 @@ function App() {
         <Switch>
           <Route exact path='/' render={() => <About user={user} />} />
           <Route path='/work' render={() => <Work work={user.work} />} />
-          <Route path='/contact' render={() => <Contact user={user} />} />
+          <Route path='/education' render={() => <Education education={user.education} />} />
         </Switch>
         <Footer />
       </div>

@@ -25,10 +25,10 @@ export default function Sidebar({ user }) {
           </Menu.Item>
 
           <Menu.Item
-            name='contact'
-            active={location === '/contact'}
+            name='education'
+            active={location === '/education'}
           >
-            <Link to='/contact'>Contact</Link>
+            <Link to='/education'>Education</Link>
           </Menu.Item>
 
           <Menu.Item header position="right">
