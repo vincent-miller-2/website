@@ -44,6 +44,18 @@ export default function MobileNav({ user }) {
           >
             <Link to='/education'>Education</Link>
           </Menu.Item>
+
+          <Menu.Item
+            name='resume'
+          >
+            <a
+              href="https://docs.google.com/document/d/1G_gXDmzU_6OTMR9ZbY_wKsNrpNVhROaZGkK2DWgcUCo/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Resume
+            </a>
+          </Menu.Item>
       </Sidebar>
 
       <Sidebar.Pusher dimmed={sidebarOpened}>
