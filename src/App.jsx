@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import PageHeader from './components/PageHeader';
+import { BrowserRouter as Router } from "react-router-dom";
+import Media from 'react-media';
 import SideBar from './components/Sidebar';
-import About from './components/About';
-import Work from './components/Work';
-import Education from './components/Education';
-import Footer from './components/Footer';
+import MobileNav from './components/MobileNav/MobileNav';
+import AppContent from './components/AppContent';
 import './App.scss';
 
 function App() {
@@ -26,14 +24,19 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <SideBar user={user} />
-        <PageHeader />
-        <Switch>
-          <Route exact path='/' render={() => <About user={user} />} />
-          <Route path='/work' render={() => <Work work={user.work} />} />
-          <Route path='/education' render={() => <Education education={user.education} />} />
-        </Switch>
-        <Footer />
+        <Media query="(min-width: 576px)" render={() =>
+          (
+            <>
+              <SideBar user={user} />
+              <AppContent user={user} />
+            </>
+          )}
+        />
+        <Media query="(max-width: 575px)" render={() =>
+          (
+            <MobileNav user={user} />
+          )}
+        />
       </div>
     </Router>
   );

@@ -10,10 +10,8 @@ export default function Work({ work }) {
 
   return (
     <main className="portfolio__work">
-      <Container text>
-        <div className="portfolio__work__items">
-          {workItems}
-        </div>
+      <Container text className="portfolio__work__items">
+        {workItems}
       </Container>
     </main>
   )

@@ -57,6 +57,18 @@ export default function About({ user }) {
                 />
                 <a href="https://www.linkedin.com/in/vincent-miller/" target="_blank" rel="noreferrer noopener">linkedin.com/in/vincent-miller</a>
               </Card.Description>
+              <Card.Description className="portfolio__about__contact__link">
+                <Button
+                  as="a"
+                  href="https://github.com/vincent-miller-2"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  circular
+                  color="black"
+                  icon="github"
+                />
+                <a href="https://github.com/vincent-miller-2" target="_blank" rel="noreferrer noopener">github.com/vincent-miller-2</a>
+              </Card.Description>
             </Card.Content>
           </Card>
         </Card.Group>

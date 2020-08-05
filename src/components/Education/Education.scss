@@ -1,10 +1,7 @@
 .portfolio__education {
-  > div.ui.segment:first-child {
-    margin-top: 11em;
-  }
-  
   &__items {
     &__item{
+      text-align: center;
       &__image {
         > img {
           max-width: 10em;
@@ -20,6 +17,7 @@
 
       &__descripton {
         text-align: left;
+        font-size: 14px;
       }
     }
   }

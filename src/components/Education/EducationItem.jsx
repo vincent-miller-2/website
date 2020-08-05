@@ -1,14 +1,13 @@
 import React from 'react';
-import { Header, Image, Grid, Container } from 'semantic-ui-react';
-import OhioStateImage from '../../Images/ohiostate.png';
-import TEImage from '../../Images/techelevator.jpg';
+import { Header, Image, Segment } from 'semantic-ui-react';
+import OhioStateImage from '../../assets/images/ohiostate.png';
+import TEImage from '../../assets/images/techelevator.jpg'
 
 export default function EducationItem({ education }) {
   const image = education.website === 'TEImage' ? TEImage : OhioStateImage;
 
   return (
-    <Grid.Column className="portfolio__education__items__item">
-      <Container text>
+    <Segment text className="portfolio__education__items__item">
         <Image className="portfolio__education__items__item__image" src={image} wrapped ui={false} />
         <Header as='h2'>{education.institution}</Header>
         <Header as='h3'>{education.area}</Header>
@@ -21,7 +20,6 @@ export default function EducationItem({ education }) {
           </span>
         </div>
         <p className="portfolio__education__items__item__descripton">{education.description}</p>
-      </Container>
-    </Grid.Column>
+    </Segment>
   )
 }
