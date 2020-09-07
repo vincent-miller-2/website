@@ -1,6 +1,8 @@
+/* eslint-disable no-plusplus */
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router } from "react-router-dom";
 import Media from 'react-media';
+import { push as Menu } from 'react-burger-menu'
 import SideBar from './components/Sidebar';
 import MobileNav from './components/MobileNav/MobileNav';
 import AppContent from './components/AppContent';
@@ -20,25 +22,19 @@ function App() {
   if (!user) {
     return <div />
   }
-  
+
   return (
-    <Router>
-      <div className="App">
-        <Media query="(min-width: 576px)" render={() =>
-          (
-            <>
+      <Router>
+        <div className="App">
+          <div id="outer-container">
+            <Menu pageWrapId="page-wrap" outerContainerId="outer-container" />
+            <main id="page-wrap">
               <SideBar user={user} />
               <AppContent user={user} />
-            </>
-          )}
-        />
-        <Media query="(max-width: 575px)" render={() =>
-          (
-            <MobileNav user={user} />
-          )}
-        />
-      </div>
-    </Router>
+            </main>
+          </div>
+        </div>
+      </Router>
   );
 }
 
