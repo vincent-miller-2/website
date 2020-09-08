@@ -1,24 +1,53 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { push as Menu } from 'react-burger-menu';
+import { Icon } from 'semantic-ui-react';
 import './Sidebar.scss';
 
-export default function Sidebar({ user }) {
-  const location = useLocation().pathname;
+export default function Sidebar() {
 
   return (
     <Menu pageWrapId="page-wrap" outerContainerId="outer-container">
-      <Link to="/">About Me</Link>
+      <NavLink
+        exact
+        to="/"
+        activeStyle={{
+          fontWeight: "bold",
+          color: "gray"
+        }}
+      >
+        <Icon name='user' />
+        About Me
+      </NavLink>
 
-      <Link to="/work">Work</Link>
+      <NavLink
+        to="/work"
+        activeStyle={{
+          fontWeight: "bold",
+          color: "gray"
+        }}
+      >
+        <Icon name='briefcase' />
+        Work
+      </NavLink>
 
-      <Link to="/education">Education</Link>
+      <NavLink
+        to="/education"
+        activeStyle={{
+          fontWeight: "bold",
+          color: "gray"
+        }}
+      >
+        <Icon name='graduation cap' />
+        Education
+      </NavLink>
 
       <a
         href="https://docs.google.com/document/d/1G_gXDmzU_6OTMR9ZbY_wKsNrpNVhROaZGkK2DWgcUCo/edit?usp=sharing"
         target="_blank"
         rel="noreferrer noopener"
       >
+        <Icon name='file alternate' />
         Resume
       </a>
 

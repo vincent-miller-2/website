@@ -8,8 +8,10 @@ export default function WorkItem({ experience }) {
 
   return (
     <Segment className="portfolio__work__items__item">
-      <Header as='h2'>{experience.company}</Header>
-      <Header as='h3'>{experience.position}</Header>
+      <div className="portfolio__work__items__item__headers">
+        <Header as='h2'>{experience.company}</Header>
+        <Header as='h3'>{experience.position}</Header>
+      </div>
       <div className="portfolio__work__items__item__basic">
         <span className="portfolio__work__items__item__basic__location">
           {experience.location}

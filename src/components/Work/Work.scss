@@ -1,6 +1,15 @@
+@import '../../assets/styles/media';
+
 .portfolio__work {
   &__items {
     &__item {
+      &__headers {
+        text-align: center;
+        
+        @include md {
+          text-align: left;
+        }
+      }
       &__basic {
         display: flex;
         justify-content: space-between;

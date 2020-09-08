@@ -1,5 +1,6 @@
 .portfolio__footer {
   &__content.ui.vertical.segment {
-    padding: 2.1em 0;
+    min-height: 10vh;
+    padding: 1em 0;
   }
 }
